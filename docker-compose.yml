@@ -71,9 +71,9 @@ services:
       DASHBOARD_USERNAME: ${DASHBOARD_USERNAME}
       DASHBOARD_PASSWORD: ${DASHBOARD_PASSWORD}
       KONG_LUA_SSL_TRUSTED_CERTIFICATE: /etc/ssl/cert.pem
-      ACME_EMAIL: YOUREMAIL
+      ACME_EMAIL: ${ACME_EMAIL}
       # ex. testdomain.com
-      ACME_DOMAIN: YOURDOMAIN
+      ACME_DOMAIN: ${ACME_DOMAIN}
     volumes:
       # https://github.com/supabase/supabase/issues/12661
       - ./volumes/api/kong.yml:/home/kong/temp.yml:ro
